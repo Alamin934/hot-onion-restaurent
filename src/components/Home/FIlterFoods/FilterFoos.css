@@ -1,0 +1,10 @@
+.filter-foods .nav a{
+    color: #333;
+    font-weight: 600;
+}
+.filter-foods .nav a:hover{
+    color: rgb(245, 14, 14)!important;
+}
+.card:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
