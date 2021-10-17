@@ -3,26 +3,42 @@ import './App.css';
 import Header from './components/Shared/Header/Header';
 import Home from './components/Home/Home/Home';
 import Footer from './components/Shared/Footer/Footer';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import SignUp from './components/Signin/SignUp/SignUp';
+import Signin from './components/Signin/SignIn/Signin';
+import NotFound from './components/NotFound/NotFound';
+import AuthProvider from './components/contexts/AuthProvider';
+import FoodDetail from './components/Home/FoodDetail/FoodDetail';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
-    <div className="App">
+    <AuthProvider>
       <BrowserRouter>
         <Header></Header>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home></Home>
+          </Route>
+          <Route exact path="/signin">
+            <Signin></Signin>
+          </Route>
+          <Route exact path="/signup">
+            <SignUp></SignUp>
+          </Route>
+          <PrivateRoute exact path="/foodDetail/:foodId">
+            <FoodDetail></FoodDetail>
+          </PrivateRoute>
+          <Route path="*">
+            <NotFound></NotFound>
           </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
 

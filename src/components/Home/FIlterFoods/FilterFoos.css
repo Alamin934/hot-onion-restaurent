@@ -1,9 +1,12 @@
 .filter-foods .nav a{
     color: #333;
     font-weight: 600;
+    padding: 0px;
+    margin: 0px 15px;
 }
-.filter-foods .nav a:hover{
+.filter-foods .nav .active{
     color: rgb(245, 14, 14)!important;
+    border-bottom: 3px solid rgb(245, 14, 14);
 }
 .card:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;

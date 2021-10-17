@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif!important;
+  font-family: 'Poppins', sans-serif!important;
 }
 
 code {
@@ -12,6 +13,20 @@ code {
   background-color: #fd1e1e;
   border-radius: 25px!important;
   border: none;
-  width: 120px;
+  padding: 10px 34px!important;
   text-align: center;
+}
+a {
+  color: rgb(29, 29, 29)!important;
+  text-decoration: none!important;
+}
+a:hover{
+  color:none;
+}
+button:focus{
+  outline:none;
+  box-shadow: none!important;
+}
+.btn-light{
+  background-color: #e2e4e6!important;
 }

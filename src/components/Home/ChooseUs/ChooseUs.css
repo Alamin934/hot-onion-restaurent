@@ -5,3 +5,14 @@
 .choose-us .card .btn{
     color: #7AC948;
 }
+
+@media screen and (max-width:992px){
+    .choose-us .w-50{
+        width: 75%!important;
+    }
+}
+@media screen and (max-width:767px){
+    .choose-us .w-50{
+        width: 90%!important;
+    }
+}

@@ -1,6 +1,11 @@
 .header a{
     color:rgb(33, 33, 33)!important;
+    text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .header .btn-red{
     color: #fff!important;
+    padding: 7px;
 }

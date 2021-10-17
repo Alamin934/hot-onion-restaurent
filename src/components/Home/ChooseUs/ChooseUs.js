@@ -12,7 +12,7 @@ const ChooseUs = () => {
                     <h1>Why you choose us</h1>
                     <p className="mt-3 w-50">Barton waited twenty always repair in within we do. An delighted offending curiosity my is dashwoods at. Boy prosperous increasing surrounded.</p>
                 </div>
-                <Row xs={1} md={3} className="g-4 mt-4">
+                <Row xs={1} md={2} lg={3} className="g-4 mt-4">
                     <Col>
                         <Card>
                             <Card.Img variant="top" src="https://i.ibb.co/s9jWWWk/adult-blur-blurred-background-687824.png" />
