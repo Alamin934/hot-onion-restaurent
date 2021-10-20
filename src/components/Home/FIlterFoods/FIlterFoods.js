@@ -5,20 +5,19 @@ import './FilterFoos.css';
 
 const FIlterFoods = () => {
     const [foods, setFoods] = useState([]);
-    const [displayFoods, setDisplayFoods] = useState([]);
+    const [category, setCategory] = useState('breakfast');
 
     useEffect(() => {
         fetch('./foods.json')
             .then(res => res.json())
             .then(data => {
-                setFoods(data);
-                setDisplayFoods(data);
+                const filterFood = data?.filter(d => d.category === category);
+                setFoods(filterFood);
             })
-    }, []);
+    }, [category]);
 
     const handleFilter = (category) => {
-        const filterFood = foods?.filter(food => food.category === category);
-        setDisplayFoods(filterFood);
+        setCategory(category);
     }
     return (
         <div className="py-5 my-3 text-center filter-foods" id="filterFood">
@@ -41,7 +40,7 @@ const FIlterFoods = () => {
                 </Row>
                 <Row xs={1} md={2} lg={3} className="g-4 mt-4">
                     {
-                        displayFoods?.slice(0, 6)?.map(food => <Foods
+                        foods?.map(food => <Foods
                             key={food.id}
                             food={food}
                         ></Foods>)
